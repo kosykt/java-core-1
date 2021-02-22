@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1428cf98-6a0e-44e9-8301-bb391749bb66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../les1/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1428cf98-6a0e-44e9-8301-bb391749bb66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,5 +69,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="456" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613974125254">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="456" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.738@0.0.1360.738" timestamp="1613974125254" />
   </component>
 </project>
