@@ -85,12 +85,18 @@ public class Les2 {
         System.out.println("Минимальное число = " + min);
 
         //HW 2.6
-//
-//        int[] arr6 = {2, 2, 2, 6};
-//
-//        for (int i = 0; i < arr6.length; i++){
-//
-//        }
+
+        int[] arr6 = {2, 2, 2, 6};
+        int[] check1 = new int[arr6.length];
+        int[] check2 = new int[arr6.length];
+        int number = arr6.length;
+
+        for (int i = 0; i < arr6.length; i++){
+            while (true){
+                check1[i] = arr6[i];
+
+            }
+        }
 
     }
 
