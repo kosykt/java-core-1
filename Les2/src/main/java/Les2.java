@@ -86,7 +86,24 @@ public class Les2 {
 
         //HW 2.6
 
-        int[] arr6 = {2, 2, 2, 6};
+        int[] arr6 = {2, 2, 2, 3, 3};
+        int sum = 0;
+        int number = 0;
+
+        for (int i = 0; i < arr6.length; i++) {
+            sum += arr6[i];
+        }
+        for (int i = arr6.length - 1; i > 0; i--) {
+            number = number + arr6[i];
+            if (sum - number == number){
+                System.out.println("true");
+                break;
+            }
+
+
+        }
+
+
 
     }
 
