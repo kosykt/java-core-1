@@ -13,7 +13,7 @@ public class HW32 {
             }
         }
         }
-        
+
 //        int[] chars = counter.count("aaazAz1b11bb4bAz");
 //        for (char i = 0; i < chars.length; i++) {
 //            if (chars[i] != 0) {
