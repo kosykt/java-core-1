@@ -22,7 +22,7 @@ public class HW32 {
             String playchoice = playerword.next();
             char[] y = playchoice.toCharArray();
 
-            if (compchoice.equals(playchoice)){ 
+            if (compchoice.equals(playchoice)){
                 System.out.println("Поздравляю вы победили");
                 success ++;
             }else {
