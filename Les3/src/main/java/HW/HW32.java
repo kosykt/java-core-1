@@ -11,32 +11,41 @@ public class HW32 {
     }
 
     public static void gameHW32 (){
+        int success = 0;
         String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
         Random random = new Random();
         int wordnum = random.nextInt(words.length);
         String compchoice = words[wordnum];
-
-        System.out.println("Введите слово");
-        Scanner playerword = new Scanner(System.in);
-        String playchoice = playerword.next();
-
         char[] x = compchoice.toCharArray();
-        char[] y = playchoice.toCharArray();
 
-        for (char i = 0; i < x.length; i++){
-            if (x == y){
-                System.out.println("Поздравляю вы выиграли!");
-            }else if(x[i] == y[i]){
-                System.out.print(x[i]);
-            } else {
-                System.out.print("#############");
-                break;
+        do {
+            System.out.println("Введите слово");
+            Scanner playerword = new Scanner(System.in);
+            String playchoice = playerword.next();
+            char[] y = playchoice.toCharArray();
+
+            if (compchoice.equals(playchoice)){
+                System.out.println("Поздравляю вы победили");
+                success ++;
+            }else {
+                for (char i = 0; i < x.length; i++){
+                    if(x[i] == y[i]){
+                        System.out.print(x[i]);
+                    } else {
+                        System.out.println("#############");
+                        break;
+                    }
+                }
             }
-        }
+
+
+        }while (success != 1);
+
     }
 
     public static char[] choice(char a) {
 
+        return new char[0];
     }
 
 }
