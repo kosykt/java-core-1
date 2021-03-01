@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class HW32 {
     public static void main(String[] args) {
-
         gameHW32();
-
     }
 
     public static void gameHW32 (){
@@ -24,7 +22,7 @@ public class HW32 {
             String playchoice = playerword.next();
             char[] y = playchoice.toCharArray();
 
-            if (compchoice.equals(playchoice)){
+            if (compchoice.equals(playchoice)){ 
                 System.out.println("Поздравляю вы победили");
                 success ++;
             }else {
@@ -37,15 +35,6 @@ public class HW32 {
                     }
                 }
             }
-
-
         }while (success != 1);
-
     }
-
-    public static char[] choice(char a) {
-
-        return new char[0];
-    }
-
 }
