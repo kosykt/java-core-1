@@ -202,7 +202,7 @@ public class HW4 {
                     int ch = 1;
                     int dot = 1;
                     do {
-                        if (i - ch > size - 1){
+                        if (i - ch < 0){
                             break;
                         }
                         if (j + ch > size - 1){
