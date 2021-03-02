@@ -127,12 +127,15 @@ public class HW4 {
 //            }
 //            System.out.println();
 //        }
-        for (int i = 1; i < size; i++) {
-            for (int j = 1; j < size; j++) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 if (map[i][j] == player){
                     int ch = 1;
                     int dot = 1;
                     do {
+                        if (j + ch > size - 1){
+                            break;
+                        }
                         if (map[i][j] == map[i][j+ch]){
                             ch++;
                         }
@@ -141,7 +144,7 @@ public class HW4 {
                         }
                         dot++;
                     }while (dot != size);
-                    if (map[i][j] == map[i][j]);
+
                 }
             }
         }
