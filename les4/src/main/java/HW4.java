@@ -19,12 +19,11 @@ public class HW4 {
             size = sizescan.nextInt();
             System.out.println("Введите колличество фишек для победы");
             dotstowin = dotstowinscan.nextInt();
-            if (size < dotstowin){
-                System.out.println("Колличество фишек для победы должно быть меньше либо равно размера поля");
+            if (size < dotstowin || size <= 1 || dotstowin <= 1){
+                System.out.println("Колличество фишек для победы должно быть меньше либо равно размеру поля, колличество фишек для победы должно быть больше одного, размер поля должен быть болше одного");
             }else {
                 break;
             }
-
         }while (true);
         initgamemap();
         printgamemap();
@@ -52,7 +51,6 @@ public class HW4 {
         }
         System.out.println("Игра закончена");
     }
-
 
     public static void initgamemap(){
         map = new char[size][size];
