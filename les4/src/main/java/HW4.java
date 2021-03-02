@@ -1,19 +1,33 @@
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class HW4 {
     public static char[][] map;
-    public static char[][] check;
-    public static final int size = 4;
-    public static final int dotstowin = 3;
+    public static int size = 3;
+    public static int dotstowin = 3;
     public static char emptydot = '*';
     public static char player = 'X';
     public static char computer = 'O';
     public static Scanner sc = new Scanner(System.in);
+    public static Scanner sizescan = new Scanner(System.in);
+    public static Scanner dotstowinscan = new Scanner(System.in);
     public static Random rand = new Random();
 
+
     public static void main(String[] args) {
+        do{
+            System.out.println("Введите размеры поля");
+            size = sizescan.nextInt();
+            System.out.println("Введите колличество фишек для победы");
+            dotstowin = dotstowinscan.nextInt();
+            if (size < dotstowin){
+                System.out.println("Колличество фишек для победы должно быть меньше либо равно размера поля");
+            }else {
+                break;
+            }
+
+        }while (true);
+
         initgamemap();
         printgamemap();
         while (true) {
@@ -27,7 +41,7 @@ public class HW4 {
                 System.out.println("Ничья");
                 break;
             }
-//            aiTurn();
+            aiTurn();
             printgamemap();
             if (checkWin(computer)) {
                 System.out.println("Победил Искуственный Интеллект");
@@ -96,40 +110,9 @@ public class HW4 {
     }
 
     public static boolean checkWin(char symb) {
-//        if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-//        if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-//        if(map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-//        if(map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-//        if(map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-//        if(map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
-//        if(map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-//        if(map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
-//        check = new char[dotstowin][dotstowin];
-//        for (int i = 0; i < size;) { //столбец
-//            for (int j = 0; i < size; i++) {
-//                check[i][j] = map[i][j];
-//            }
-//        }
-//
-//        for (int i = 0; i < dotstowin; i++) {
-//            for (int j = 0; j < dotstowin; j++) {
-//                System.out.print(check[i][j] + ' ');
-//            }
-//            System.out.println();
-//        }
-//
-//
-//
-//        System.out.println("проверка check ");
-//        for (int i = 0; i < dotstowin; i++) {
-//            for (int j = 0; j < dotstowin; j++) {
-//                System.out.print(check[i][j]);
-//            }
-//            System.out.println();
-//        }
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                if (map[i][j] == player){
+                if (map[i][j] == symb){
                     int ch = 1;
                     int dot = 1;
                     do {
@@ -144,14 +127,12 @@ public class HW4 {
                         }
                         dot++;
                     }while (dot != size);
-
                 }
             }
         }
-
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                if (map[i][j] == player){
+                if (map[i][j] == symb){
                     int ch = 1;
                     int dot = 1;
                     do {
@@ -166,14 +147,12 @@ public class HW4 {
                         }
                         dot++;
                     }while (dot != size);
-
                 }
             }
         }
-
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                if (map[i][j] == player){
+                if (map[i][j] == symb){
                     int ch = 1;
                     int dot = 1;
                     do {
@@ -195,10 +174,9 @@ public class HW4 {
                 }
             }
         }
-
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                if (map[i][j] == player){
+                if (map[i][j] == symb){
                     int ch = 1;
                     int dot = 1;
                     do {
@@ -216,12 +194,9 @@ public class HW4 {
                         }
                         dot++;
                     }while (dot != size);
-
                 }
             }
         }
-
-
         return false;
     }
 
