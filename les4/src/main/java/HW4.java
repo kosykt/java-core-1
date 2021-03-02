@@ -13,7 +13,6 @@ public class HW4 {
     public static Scanner dotstowinscan = new Scanner(System.in);
     public static Random rand = new Random();
 
-
     public static void main(String[] args) {
         do{
             System.out.println("Введите размеры поля");
@@ -27,7 +26,6 @@ public class HW4 {
             }
 
         }while (true);
-
         initgamemap();
         printgamemap();
         while (true) {
@@ -208,8 +206,4 @@ public class HW4 {
         }
         return true;
     }
-
-
-
-
 }
