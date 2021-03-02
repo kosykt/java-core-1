@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -103,17 +104,22 @@ public class HW4 {
 //        if(map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
 //        if(map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
 //        if(map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
-        check = new char[dotstowin -1][dotstowin - 1];
-        String winc = String.valueOf(check);
-        for (int i = 0; i < size - 1;) { //столбец
-            for (int j = 0; i < size - 1; i++) {
-                check[i][j] = map[i][j];
-            }
-        }
-
-        System.out.println(winc);
-
-
+//        check = new char[dotstowin][dotstowin];
+//        for (int i = 0; i < size;) { //столбец
+//            for (int j = 0; i < size; i++) {
+//                check[i][j] = map[i][j];
+//            }
+//        }
+//
+//        for (int i = 0; i < dotstowin; i++) {
+//            for (int j = 0; j < dotstowin; j++) {
+//                System.out.print(check[i][j] + ' ');
+//            }
+//            System.out.println();
+//        }
+//
+//
+//
 //        System.out.println("проверка check ");
 //        for (int i = 0; i < dotstowin; i++) {
 //            for (int j = 0; j < dotstowin; j++) {
@@ -121,6 +127,26 @@ public class HW4 {
 //            }
 //            System.out.println();
 //        }
+        for (int i = 1; i < size; i++) {
+            for (int j = 1; j < size; j++) {
+                if (map[i][j] == player){
+                    int ch = 1;
+                    int dot = 1;
+                    do {
+                        if (map[i][j] == map[i][j+ch]){
+                            ch++;
+                        }
+                        if (ch == dotstowin){
+                            return true;
+                        }
+                        dot++;
+                    }while (dot != size);
+                    if (map[i][j] == map[i][j]);
+                }
+            }
+        }
+
+
         return false;
     }
 
