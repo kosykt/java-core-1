@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HW4 {
     public static char[][] map;
     public static char[][] check;
-    public static final int size = 3;
+    public static final int size = 4;
     public static final int dotstowin = 3;
     public static char emptydot = '*';
     public static char player = 'X';
@@ -137,6 +137,28 @@ public class HW4 {
                             break;
                         }
                         if (map[i][j] == map[i][j+ch]){
+                            ch++;
+                        }
+                        if (ch == dotstowin){
+                            return true;
+                        }
+                        dot++;
+                    }while (dot != size);
+
+                }
+            }
+        }
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (map[i][j] == player){
+                    int ch = 1;
+                    int dot = 1;
+                    do {
+                        if (i + ch > size - 1){
+                            break;
+                        }
+                        if (map[i][j] == map[i+ch][j]){
                             ch++;
                         }
                         if (ch == dotstowin){
