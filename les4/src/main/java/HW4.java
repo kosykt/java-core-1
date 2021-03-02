@@ -180,7 +180,35 @@ public class HW4 {
                         if (i + ch > size - 1){
                             break;
                         }
+                        if (j + ch > size - 1){
+                            break;
+                        }
                         if (map[i][j] == map[i+ch][j+ch]){
+                            ch++;
+                        }
+                        if (ch == dotstowin){
+                            return true;
+                        }
+                        dot++;
+                    }while (dot != size);
+
+                }
+            }
+        }
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (map[i][j] == player){
+                    int ch = 1;
+                    int dot = 1;
+                    do {
+                        if (i - ch > size - 1){
+                            break;
+                        }
+                        if (j + ch > size - 1){
+                            break;
+                        }
+                        if (map[i][j] == map[i-ch][j+ch]){
                             ch++;
                         }
                         if (ch == dotstowin){
