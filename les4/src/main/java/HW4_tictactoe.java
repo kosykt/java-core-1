@@ -98,12 +98,48 @@ public class HW4_tictactoe {
     public static void aiTurn() {
         int x, y;
         do {
+//            aiAlgorithm();
+
             x = rand.nextInt(size);
             y = rand.nextInt(size);
         } while (!isCellValid(x, y));
         System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
         map[y][x] = computer;
     }
+
+//    ниже попытка написать алгоритм ИИ, но это больше похоже на очень плохой код, ввиду этого был заброшен
+
+//    public static int[] aiAlgorithm(){
+//        int x, y;
+//        x = y = 1;
+//        int[] stepDot = {x , y};
+//        int aiCheckwin = 0;
+////        проверка по горизонтали
+//        for (int i = 0; i < size; i++) {
+//            for (int j = 0; j < size; j++) {
+//                if (map[i][j] == player){
+//                    int ch = 1;
+//                    int dot = 1;
+//                    do {
+//                        if (j + ch > size - 1){
+//                            break;
+//                        }
+//                        if (map[i][j] == map[i][j+ch]){
+//                            ch++;
+//                        }
+//                        if (ch == dotstowin - 1){
+//                            x = i;
+//                            y = j + ch;
+//                            aiCheckwin ++;
+//                            break;
+//                        }
+//                        dot++;
+//                    }while (dot != size);
+//                }
+//            }
+//        }
+//
+//    }
 
     public static boolean checkWin(char symb) {
         for (int i = 0; i < size; i++) {
