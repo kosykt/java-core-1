@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class HW4_Battleships {
+public class Battleships {
     private static final int EMPTY = 0;
     private static final int SHIP = 1;
     private static final int HIT_SHIP = -1;
