@@ -1,0 +1,2 @@
+public class LS5 {
+}
