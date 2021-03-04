@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class HW4 {
+public class HW4_tictactoe {
     public static char[][] map;
     public static int size = 3;
     public static int dotstowin = 3;
