@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Worker {
     private String name;
     private String position;
@@ -13,5 +15,13 @@ public class Worker {
         this.phoneNumber = phoneNumber;
         this.salary = salary;
         this.age = age;
+        printold();
+    }
+
+    public void printold() {
+        if (this.age > 40) {
+            System.out.println("Имя:" + name + ", должность:" + position + ", email:" + email + ", номер телефона:" + phoneNumber + ", зарплата:" + salary + ", возраст:" + age);
+        }
     }
 }
+

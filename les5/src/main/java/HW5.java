@@ -11,5 +11,6 @@ public class HW5 {
         workersArray[3] = new Worker("Vasilev Konstantin", "Engineer", "konstantin@mailbox.com", 8999333, 50000, 60);
         workersArray[4] = new Worker("Borisov Petr", "Engineer", "petr@mailbox.com", 8999444, 60000, 25);
         workersArray[5] = workersArray[4];
+
     }
 }
