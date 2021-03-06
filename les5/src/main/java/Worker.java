@@ -6,17 +6,16 @@ public class Worker {
     private int salary;
     private int age;
 
-    public Worker(String name, String position, String email, int phoneNumber, int salary, int age){
+    Worker(String name, String position, String email, int phoneNumber, int salary, int age){
         this.name = name;
         this.position = position;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.salary = salary;
         this.age = age;
-        printold();
     }
 
-    public void printold() {
+    void printW() {
         if (this.age > 40) {
             System.out.println("Имя:" + name + ", должность:" + position + ", email:" + email + ", номер телефона:" + phoneNumber + ", зарплата:" + salary + ", возраст:" + age);
         }
