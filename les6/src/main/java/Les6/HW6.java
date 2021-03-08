@@ -10,6 +10,5 @@ public class HW6 {
         System.out.println(c1.swim(1));
         System.out.println(d1.run(550));
         System.out.println(d1.swim(51));
-
     }
 }
