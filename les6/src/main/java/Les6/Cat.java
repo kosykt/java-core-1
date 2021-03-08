@@ -1,6 +1,7 @@
 package Les6;
 
 public class Cat extends Animal{
+    private int catsQuantity = 0;
 
     public Cat(String name, String color, int age, int run, int swim) {
         super(name, color, age, run, swim);
@@ -12,6 +13,8 @@ public class Cat extends Animal{
         if (swim != catSwimLimit){
             this.swim = catSwimLimit;
         }
+        catsQuantity ++;
+        animalsQuantity ++;
     }
 
     @Override

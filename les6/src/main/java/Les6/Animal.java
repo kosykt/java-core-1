@@ -1,15 +1,16 @@
 package Les6;
 
 public class Animal {
-    String name;
-    String color;
-    int age;
-    int run;
-    int swim;
-    int catRunLimit = 200;
-    int catSwimLimit = 0;
-    int dogRunLimit = 500;
-    int dogSwimLimit = 10;
+    protected String name;
+    protected String color;
+    protected int age;
+    protected int run;
+    protected int swim;
+    protected final int catRunLimit = 200;
+    protected final int catSwimLimit = 0;
+    protected final int dogRunLimit = 500;
+    protected final int dogSwimLimit = 10;
+    protected int animalsQuantity = 0;
 
 
     public Animal(String name,String color, int age, int run, int swim) {
@@ -25,5 +26,8 @@ public class Animal {
     }
     String swim (int s){
         return (this.name + " проплыл: " + s);
+    }
+    public static void animalNumbers(){
+        System.out.println("Количество животных: " + animalsQuantity);
     }
 }
