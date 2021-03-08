@@ -12,7 +12,6 @@ public class Animal {
     protected final int dogSwimLimit = 10;
     protected int animalsQuantity = 0;
 
-
     public Animal(String name,String color, int age, int run, int swim) {
         this.name = name;
         this.color = color;
@@ -24,10 +23,8 @@ public class Animal {
     String run (int r){
         return (this.name + " пробежал: " + r);
     }
+
     String swim (int s){
         return (this.name + " проплыл: " + s);
-    }
-    public static void animalNumbers(){
-        System.out.println("Количество животных: " + animalsQuantity);
     }
 }
