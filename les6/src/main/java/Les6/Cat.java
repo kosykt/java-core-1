@@ -2,7 +2,7 @@
 package Les6;
 
 public class Cat extends Animal{
-    private int catsQuantity = 0;
+    private static int catsQuantity = 0;
 
     public Cat(String name, String color, int age, int run, int swim) {
         super(name, color, age, run, swim);
@@ -33,5 +33,9 @@ public class Cat extends Animal{
         }else {
             return (this.name + " отказывается плыть");
         }
+    }
+
+    public static int getCatsQuantity(){
+        return catsQuantity;
     }
 }
