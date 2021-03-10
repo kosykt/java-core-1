@@ -1,6 +1,4 @@
 
-
-
 package Les6;
 
 public class Dog extends Animal{
