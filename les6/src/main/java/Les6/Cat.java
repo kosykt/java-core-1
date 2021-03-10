@@ -1,3 +1,6 @@
+
+
+
 package Les6;
 
 public class Cat extends Animal{
