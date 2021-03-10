@@ -11,4 +11,8 @@ public class Plate {
     public void info() {
         System.out.println("plate: " + food);
     }
+
+    public int getFood() {
+        return food;
+    }
 }
