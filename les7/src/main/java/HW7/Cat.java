@@ -11,7 +11,7 @@ public class Cat {
         this.fulless = fulless;
     }
 
-    public void eat(Plate p) {
-        p.decreaseFood(appetite);
+    public void eat() {
+        Plate.decreaseFood(appetite);
     }
 }

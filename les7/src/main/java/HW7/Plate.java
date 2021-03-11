@@ -1,12 +1,16 @@
 package HW7;
 
 public class Plate {
-    private int food;
+    private static int food;
     public Plate(int food) {
         this.food = food;
     }
-    public void decreaseFood(int n) {
-        food -= n;
+    public static int decreaseFood(int n) {
+        int x = 0;
+        if (food - n >= 0){
+            food -= n;
+        }
+        return x;
     }
     public void info() {
         System.out.println("plate: " + food);
