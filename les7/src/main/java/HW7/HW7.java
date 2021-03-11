@@ -2,7 +2,7 @@ package HW7;
 
 public class HW7 {
     public static void main(String[] args) {
-        Cat cat = new Cat("Barsik", 5);
+        Cat cat = new Cat("Barsik", 5, false);
         Plate plate = new Plate(100);
         plate.info();
         cat.eat(plate);
