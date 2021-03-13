@@ -4,6 +4,7 @@ public class Cat {
     private String name;
     private int appetite;
     private boolean fullness;
+    private int valueCheck;
 
     public Cat(String name, int appetite, boolean fullness) {
         this.name = name;
@@ -12,18 +13,19 @@ public class Cat {
     }
 
     public void eat(Plate p) {
-        int valueCheck = Plate.getFood();
+        valueCheck = Plate.getFood();
         if (valueCheck - appetite >= 0) {
             checkFullness();
             p.decreaseFood(appetite);
         } else {
             int a = appetite - Plate.getFood();
+            //по моему это какой-то костыль, но по другому я не придумал как это реализовать
             System.out.printf("%s'у не хватает %d еды\n", name, a);
         }
     }
 
     private void checkFullness() {
-        int valueCheck = Plate.getFood();
+        valueCheck = Plate.getFood();
         if (valueCheck >= appetite){
             fullness = true;
         }
