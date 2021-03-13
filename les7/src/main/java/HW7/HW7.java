@@ -21,7 +21,7 @@ public class HW7 {
             plate.info();
             catsArray[i].eat(plate);
             catsArray[i].isFullness();
-            if (Plate.getFood() == 0){
+            if (Plate.getFood() < catsArray[i].getAppetite()){
                 hungryCat();
             }
         }

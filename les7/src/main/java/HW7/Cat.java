@@ -35,4 +35,8 @@ public class Cat {
             System.out.println(name + " голоден");
         }
     }
+
+    public int getAppetite() {
+        return appetite;
+    }
 }
