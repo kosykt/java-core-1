@@ -1,7 +1,7 @@
 package HW7;
 
 public class Plate {
-    private int food;
+    private static int food;
 
     public Plate(int food) {
         this.food = food;
@@ -13,5 +13,9 @@ public class Plate {
 
     public void info() {
         System.out.println("plate: " + food);
+    }
+
+    public static int getFood() {
+        return food;
     }
 }
