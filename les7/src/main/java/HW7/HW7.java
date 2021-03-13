@@ -21,16 +21,19 @@ public class HW7 {
             plate.info();
             catsArray[i].eat(plate);
             catsArray[i].isFullness();
-            if (Plate.getFood() < catsArray[i].getAppetite()){
-                hungryCat();
+            if (Plate.getFood() < catsArray[i].getAppetite() && i + 1 < catsArray.length){
+                hungryCat(i + 1);
             }
         }
     }
 
-    private static void hungryCat() {
-        System.out.println("Введите количество еды, которое хотите добавить:");
-        int addFood = sc.nextInt();
-        Plate.setFood(addFood);
+    private static void hungryCat(int q) {
+        do {
+            catsArray[q].eat(plate);
+            System.out.println("Введите количество еды, которое хотите добавить:");
+            int addFood = sc.nextInt();
+            Plate.setFood(addFood);
+        }while (Plate.getFood() < catsArray[q].getAppetite());
     }
 }
 

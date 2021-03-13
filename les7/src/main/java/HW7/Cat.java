@@ -17,7 +17,8 @@ public class Cat {
             checkFullness();
             p.decreaseFood(appetite);
         } else {
-            System.out.println(name + "'у не хватает еды");
+            int a = appetite - Plate.getFood();
+            System.out.printf("%s'у не хватает %d еды\n", name, a);
         }
     }
 
@@ -38,5 +39,9 @@ public class Cat {
 
     public int getAppetite() {
         return appetite;
+    }
+
+    public String getName() {
+        return name;
     }
 }

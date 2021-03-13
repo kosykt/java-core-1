@@ -20,6 +20,6 @@ public class Plate {
     }
 
     public static void setFood(int food) {
-        Plate.food = food;
+        Plate.food += food;
     }
 }
