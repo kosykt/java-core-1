@@ -18,4 +18,8 @@ public class Plate {
     public static int getFood() {
         return food;
     }
+
+    public static void setFood(int food) {
+        Plate.food = food;
+    }
 }

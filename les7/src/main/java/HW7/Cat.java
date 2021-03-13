@@ -5,8 +5,6 @@ public class Cat {
     private int appetite;
     private boolean fullness;
 
-
-
     public Cat(String name, int appetite, boolean fullness) {
         this.name = name;
         this.appetite = appetite;
@@ -21,7 +19,6 @@ public class Cat {
         } else {
             System.out.println(name + "'у не хватает еды");
         }
-
     }
 
     private void checkFullness() {

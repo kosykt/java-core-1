@@ -1,8 +1,10 @@
 package HW7;
 
+import java.util.Scanner;
+
 public class HW7 {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         Plate plate = new Plate(10);
 
         Cat[] catsArray = new Cat[5];
@@ -17,7 +19,11 @@ public class HW7 {
             catsArray[i].eat(plate);
             catsArray[i].isFullness();
         }
-
+        if (Plate.getFood() == 0){
+            System.out.println("Введите количество еды, которое хотите добавить:");
+            int addFood = sc.nextInt();
+            Plate.setFood(addFood);
+        }
     }
 }
 
