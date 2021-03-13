@@ -12,7 +12,7 @@ public class Plate {
     }
 
     public void info() {
-        System.out.println("plate: " + food);
+        System.out.println("Количество еды: " + food);
     }
 
     public static int getFood() {
