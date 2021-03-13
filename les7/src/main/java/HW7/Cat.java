@@ -6,6 +6,7 @@ public class Cat {
     private boolean fullness;
 
 
+
     public Cat(String name, int appetite, boolean fullness) {
         this.name = name;
         this.appetite = appetite;
@@ -15,10 +16,19 @@ public class Cat {
     public void eat(Plate p) {
         int valueCheck = Plate.getFood();
         if (valueCheck - appetite >= 0) {
+            checkFullness();
             p.decreaseFood(appetite);
         } else {
             System.out.println(name + " требует еще еды");
         }
 
+    }
+
+    private void checkFullness() {
+        int valueCheck = Plate.getFood();
+        if (valueCheck >= appetite){
+            fullness = true;
+            System.out.println(fullness);
+        }
     }
 }
