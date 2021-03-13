@@ -19,7 +19,7 @@ public class Cat {
             checkFullness();
             p.decreaseFood(appetite);
         } else {
-            System.out.println(name + " требует еще еды");
+            System.out.println(name + "'у не хватает еды");
         }
 
     }
@@ -28,7 +28,14 @@ public class Cat {
         int valueCheck = Plate.getFood();
         if (valueCheck >= appetite){
             fullness = true;
-            System.out.println(fullness);
+        }
+    }
+
+    public void isFullness() {
+        if (fullness) {
+            System.out.println(name + " поел");
+        }else {
+            System.out.println(name + " голоден");
         }
     }
 }
