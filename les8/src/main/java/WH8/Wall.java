@@ -1,7 +1,7 @@
 package WH8;
 
 public class Wall {
-    private int height;
+    private static int height;
 
     public Wall(int height) {
         this.height = height;
@@ -11,10 +11,13 @@ public class Wall {
         return height;
     }
 
-    public boolean canJump(int j){
+    public boolean canJump(int j, String s){
         if (j >= height){
+            System.out.println(s + " смог перепрыгнуть");
             return true;
+        }else {
+            System.out.println(s + " не смог перепрыгнуть");
+            return false;
         }
-        return false;
     }
 }

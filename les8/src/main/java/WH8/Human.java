@@ -18,4 +18,8 @@ public class Human {
     public int getJump() {
         return jump;
     }
+
+    public String getName() {
+        return name;
+    }
 }
