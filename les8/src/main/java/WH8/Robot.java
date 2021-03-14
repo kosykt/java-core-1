@@ -18,4 +18,8 @@ public class Robot {
     public int getJump() {
         return jump;
     }
+
+    public String getName() {
+        return name;
+    }
 }

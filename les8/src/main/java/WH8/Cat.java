@@ -18,4 +18,8 @@ public class Cat {
     public int getJump() {
         return jump;
     }
+
+    public String getName() {
+        return name;
+    }
 }

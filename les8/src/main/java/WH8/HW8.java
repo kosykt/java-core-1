@@ -25,6 +25,14 @@ public class HW8 {
                 }
             }
         }
+
+        for (int i = 0; i < catsArray.length; i++) {
+            if (t.canRun(catsArray[i].getRun(), catsArray[i].getName())){
+                if (w.canJump(catsArray[i].getJump(), catsArray[i].getName())) {
+                    System.out.println(catsArray[i].getName() + " успешно преодолел испытания");
+                }
+            }
+        }
     }
 
 //    private static void startJump() {
