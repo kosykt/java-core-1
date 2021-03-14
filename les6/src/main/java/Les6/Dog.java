@@ -1,7 +1,8 @@
+
 package Les6;
 
 public class Dog extends Animal{
-    private int dogsQuantity = 0;
+    private static int dogsQuantity = 0;
 
     public Dog(String name, String color, int age, int run, int swim) {
         super(name, color, age, run, swim);
@@ -34,5 +35,9 @@ public class Dog extends Animal{
         }else {
             return (this.name + " может проплыть только: " + this.swim);
         }
+    }
+
+    public static int getDogsQuantity(){
+        return dogsQuantity;
     }
 }

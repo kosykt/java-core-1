@@ -1,3 +1,4 @@
+
 package Les6;
 
 public class Animal {
@@ -10,7 +11,7 @@ public class Animal {
     protected final int catSwimLimit = 0;
     protected final int dogRunLimit = 500;
     protected final int dogSwimLimit = 10;
-    protected int animalsQuantity = 0;
+    protected static int animalsQuantity = 0;
 
     public Animal(String name,String color, int age, int run, int swim) {
         this.name = name;
@@ -26,5 +27,9 @@ public class Animal {
 
     String swim (int s){
         return (this.name + " проплыл: " + s);
+    }
+
+    public static int getAnimalsQuantity(){
+        return animalsQuantity;
     }
 }
