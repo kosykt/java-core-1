@@ -13,8 +13,6 @@ public class HW8 {
         robotsArray[0] = new Robot("R2D2", 300,30);
 
         startRun();
-//        startJump();
-
     }
 
     private static void startRun() {
@@ -33,11 +31,13 @@ public class HW8 {
                 }
             }
         }
-    }
 
-//    private static void startJump() {
-//        for (int i = 0; i < humansArray.length; i++) {
-//            System.out.println(w.canJump(humansArray[i].getJump()));
-//        }
-//    }
+        for (int i = 0; i < robotsArray.length; i++) {
+            if (t.canRun(robotsArray[i].getRun(), robotsArray[i].getName())){
+                if (w.canJump(robotsArray[i].getJump(), robotsArray[i].getName())) {
+                    System.out.println(robotsArray[i].getName() + " успешно преодолел испытания");
+                }
+            }
+        }
+    }
 }
