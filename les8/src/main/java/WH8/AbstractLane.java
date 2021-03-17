@@ -11,7 +11,7 @@ public abstract class AbstractLane {
                 System.out.println(name + " не перепрыгнул");
             }
         }else {
-            System.out.println(name +" не пробежал");
+            System.out.println(name +" не пробежал и не допускается к прыжку");
         }
     }
 }
