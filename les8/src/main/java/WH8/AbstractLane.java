@@ -2,16 +2,16 @@ package WH8;
 
 public abstract class AbstractLane {
 
-    public void trying(int r, int j, String s){
-        if (Treadmill.distance <= r) {
-            System.out.println("пробежал");
-            if (Wall.height <= j){
-                System.out.println("перепрыгнул");
+    public void trying(int run, int jump, String name){
+        if (Treadmill.distance <= run) {
+            System.out.println(name + " пробежал");
+            if (Wall.height <= jump){
+                System.out.println(name + " перепрыгнул");
             }else {
-                System.out.println("не перепрыгнул");
+                System.out.println(name + " не перепрыгнул");
             }
         }else {
-            System.out.println("не пробежал");
+            System.out.println(name +" не пробежал");
         }
     }
 }
