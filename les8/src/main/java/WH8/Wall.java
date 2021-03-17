@@ -1,6 +1,6 @@
 package WH8;
 
-public class Wall {
+public class Wall implements Obstacle{
     private static int height;
 
     public Wall(int height) {
@@ -11,13 +11,24 @@ public class Wall {
         return height;
     }
 
-    public boolean canJump(int j, String s){
+    public void canJump(int j, String s){
         if (j >= height){
             System.out.println(s + " смог перепрыгнуть");
-            return true;
+
         }else {
             System.out.println(s + " не смог перепрыгнуть");
-            return false;
+
+        }
+    }
+
+    @Override
+    public void trying(int param) {
+        if (param >= height){
+            System.out.println(" смог перепрыгнуть");
+
+        }else {
+            System.out.println(" не смог перепрыгнуть");
+
         }
     }
 }

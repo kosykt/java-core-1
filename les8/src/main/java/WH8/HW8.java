@@ -6,7 +6,7 @@ public class HW8 {
     static Human[] humansArray = new Human[1];
     static Cat[] catsArray = new Cat[1];
     static Robot[] robotsArray = new Robot[1];
-    static Obstacle[] obstaclArray = new Obstacle[1];
+    static Obstacle[] obstaclArray = new Obstacle[2];
 
     public static void main(String[] args) {
         humansArray[0] = new Human("Henry", 200,20);
@@ -20,6 +20,10 @@ public class HW8 {
         obstaclArray[0] = new Treadmill(150);
 
         obstaclArray[0].trying(humansArray[0].getRun());
+
+        obstaclArray[1] = new Wall(10);
+
+        obstaclArray[1].trying(humansArray[0].getJump());
 
         startRun();
     }
