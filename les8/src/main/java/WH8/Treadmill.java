@@ -1,6 +1,6 @@
 package WH8;
 
-public class Treadmill {
+public class Treadmill implements Obstacle {
     private static int distance;
 
     public Treadmill(int distance) {
@@ -17,6 +17,17 @@ public class Treadmill {
             return true;
         }else {
             System.out.println(s + " не смог пробежать");
+            return false;
+        }
+    }
+
+    @Override
+    public boolean trying(int param) {
+        if (param >= distance){
+            System.out.println(" смог пробежать");
+            return true;
+        }else {
+            System.out.println(" не смог пробежать");
             return false;
         }
     }

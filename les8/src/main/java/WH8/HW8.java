@@ -2,19 +2,24 @@ package WH8;
 
 public class HW8 {
     static Wall[] w = new Wall[2];
-    static Treadmill[] t = new Treadmill[2];
+//    static Treadmill[] t = new Treadmill[1];
     static Human[] humansArray = new Human[1];
     static Cat[] catsArray = new Cat[1];
     static Robot[] robotsArray = new Robot[1];
+    static Obstacle[] obstaclArray = new Obstacle[1];
 
     public static void main(String[] args) {
         humansArray[0] = new Human("Henry", 200,20);
         catsArray[0] = new Cat("Barsik", 100,10);
         robotsArray[0] = new Robot("R2D2", 300,30);
-        t[0] = new Treadmill(150);
-        t[1] = new Treadmill(150);
+//        t[0] = new Treadmill(150);
+
         w[0] = new Wall(15);
         w[1] = new Wall(15);
+
+        obstaclArray[0] = new Treadmill(150);
+
+        obstaclArray[0].trying(humansArray[0].getRun());
 
         startRun();
     }
@@ -28,17 +33,17 @@ public class HW8 {
 //            }
 //        }
 
-        for (int j = 0; j < t.length; j++) {
-            for (int q = 0; q < w.length; q++) {
-                for (int i = 0; i < humansArray.length; i++) {
-                    if (t[j].canRun(humansArray[i].getRun(), humansArray[i].getName())){
-                        if (w[q].canJump(humansArray[i].getJump(), humansArray[i].getName())) {
-                            System.out.println(humansArray[i].getName() + " успешно преодолел испытания");
-                        }
-                    }
-                }
-            }
-        }
+//        for (int j = 0; j < t.length; j++) {
+//            for (int q = 0; q < w.length; q++) {
+//                for (int i = 0; i < humansArray.length; i++) {
+//                    if (t[j].canRun(humansArray[i].getRun(), humansArray[i].getName())){
+//                        if (w[q].canJump(humansArray[i].getJump(), humansArray[i].getName())) {
+//                            System.out.println(humansArray[i].getName() + " успешно преодолел испытания");
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
 //        for (int i = 0; i < catsArray.length; i++) {
 //            if (t.canRun(catsArray[i].getRun(), catsArray[i].getName())){
