@@ -20,8 +20,8 @@ public class Wall implements Obstacle{
     }
 
     @Override
-    public boolean trying(int r, String s) {
-        if (r >= height){
+    public boolean trying(int j, String s) {
+        if (j >= height){
             System.out.println(s + " смог перепрыгнуть");
             return true;
         }else {
