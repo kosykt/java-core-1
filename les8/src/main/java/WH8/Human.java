@@ -24,12 +24,12 @@ public class Human implements Competitors {
     }
 
     @Override
-    public int laneRun() {
+    public int start() {
         return run;
     }
 
-    @Override
-    public int laneJump() {
-        return jump;
-    }
+//    @Override
+//    public int laneJump() {
+//        return jump;
+//    }
 }

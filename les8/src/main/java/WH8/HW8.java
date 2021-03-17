@@ -17,17 +17,19 @@ public class HW8 {
 
 //        w[0] = new Wall(15);
 //        w[1] = new Wall(15);
-        competitorsArray[0] = new Human("Henry", 200,20);
+        competitorsArray[0] = new Human("Henry", 100,20);
 
         obstaclArray[0] = new Treadmill(150);
+        obstaclArray[1] = new Wall(10);
 
-        obstaclArray[0].trying(competitorsArray[0].laneRun(), competitorsArray[0].laneRun());
+        if(obstaclArray[0].trying(competitorsArray[0].start())){
+            obstaclArray[1].trying(competitorsArray[0].start());
+        }
 
 //        obstaclArray[0].trying(humansArray[0].getRun());
 
-        obstaclArray[1] = new Wall(10);
 
-        obstaclArray[1].trying(competitorsArray[0].laneJump(), competitorsArray[0].laneJump());
+//        obstaclArray[1].trying(competitorsArray[0].laneRun(), competitorsArray[0].laneJump());
 
 //        obstaclArray[1].trying(humansArray[0].getJump());
 
