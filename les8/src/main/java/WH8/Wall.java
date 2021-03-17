@@ -22,13 +22,14 @@ public class Wall implements Obstacle{
     }
 
     @Override
-    public void trying(int param) {
-        if (param >= height){
+    public int trying(int r, int s) {
+        int point = 0;
+        if (s >= height){
             System.out.println(" смог перепрыгнуть");
-
+            return ++point;
         }else {
             System.out.println(" не смог перепрыгнуть");
-
+            return ++point;
         }
     }
 }

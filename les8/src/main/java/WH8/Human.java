@@ -1,6 +1,6 @@
 package WH8;
 
-public class Human {
+public class Human implements Competitors {
     private String name;
     private int run;
     private int jump;
@@ -21,5 +21,15 @@ public class Human {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int laneRun() {
+        return run;
+    }
+
+    @Override
+    public int laneJump() {
+        return jump;
     }
 }

@@ -1,5 +1,5 @@
 package WH8;
 
 public interface Obstacle {
-    void trying(int param);
+    int trying(int r, int s);
 }
