@@ -1,5 +1,5 @@
 package WH8;
 
 public interface Obstacle {
-    boolean trying(int i, String s);
+    void trying(int r,int j, String s);
 }
