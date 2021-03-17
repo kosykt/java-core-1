@@ -22,12 +22,12 @@ public class Treadmill implements Obstacle {
     }
 
     @Override
-    public boolean trying(int r) {
+    public boolean trying(int r, String s) {
         if (r >= distance){
-            System.out.println(" смог пробежать");
+            System.out.println(s + " смог пробежать");
             return true;
         }else {
-            System.out.println(" не смог пробежать");
+            System.out.println(s + " не смог пробежать");
             return false;
         }
     }

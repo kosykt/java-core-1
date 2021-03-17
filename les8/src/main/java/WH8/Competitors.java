@@ -1,7 +1,8 @@
 package WH8;
 
 interface Competitors{
-    int start();
-//    int laneJump();
+    int getRun();
+    int getJump();
+    String getName();
 }
 

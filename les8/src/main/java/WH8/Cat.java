@@ -1,6 +1,6 @@
 package WH8;
 
-public class Cat {
+public class Cat implements  Competitors{
     private String name;
     private int run;
     private int jump;
@@ -11,14 +11,17 @@ public class Cat {
         this.jump = jump;
     }
 
+    @Override
     public int getRun() {
         return run;
     }
 
+    @Override
     public int getJump() {
         return jump;
     }
 
+    @Override
     public String getName() {
         return name;
     }
