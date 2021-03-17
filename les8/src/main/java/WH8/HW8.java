@@ -1,7 +1,6 @@
 package WH8;
 
 public class HW8 {
-    static Obstacle[] obstaclArray = new Obstacle[2];
     static Competitors[] competitorsArray = new Competitors[3];
     static AbstractLane[] abstractLanesArray = new AbstractLane[2];
 
