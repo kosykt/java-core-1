@@ -10,10 +10,10 @@ public class Wall implements ObstacleСourse{
     @Override
     public boolean trying(int num, String n) {
         if (num >= height){
-            System.out.println(n + " смог перепрыгнуть");
+            System.out.println(n + " препрыгнул стену");
             return true;
         }else {
-            System.out.println(n + " не смог перепрыгнуть");
+            System.out.println(n + " не может перепрыгнуть и заканчивает выполнение упражнений");
             return false;
         }
     }

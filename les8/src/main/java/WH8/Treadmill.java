@@ -13,7 +13,7 @@ public class Treadmill implements ObstacleСourse{
             System.out.println(n + " смог пробежать");
             return true;
         }else {
-            System.out.println(n + " не смог пробежать");
+            System.out.println(n + " не может пробежать и заканчивает выполнение упражнений");
             return false;
         }
     }
