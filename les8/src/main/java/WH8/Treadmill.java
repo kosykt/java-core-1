@@ -8,7 +8,13 @@ public class Treadmill implements ObstacleСourse{
     }
 
     @Override
-    public int getValue() {
-        return distance;
+    public boolean trying(int num, String n) {
+        if (num >= distance){
+            System.out.println(n + " смог пробежать");
+            return true;
+        }else {
+            System.out.println(n + " не смог пробежать");
+            return false;
+        }
     }
 }

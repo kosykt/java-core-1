@@ -1,5 +1,5 @@
 package WH8;
 
 public interface ObstacleСourse {
-    int getValue();
+    boolean trying(int num, String n);
 }

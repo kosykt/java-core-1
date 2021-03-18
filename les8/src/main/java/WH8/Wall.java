@@ -8,7 +8,13 @@ public class Wall implements ObstacleСourse{
     }
 
     @Override
-    public int getValue() {
-        return height;
+    public boolean trying(int num, String n) {
+        if (num >= height){
+            System.out.println(n + " смог перепрыгнуть");
+            return true;
+        }else {
+            System.out.println(n + " не смог перепрыгнуть");
+            return false;
+        }
     }
 }
