@@ -1,2 +1,2 @@
-public class MyArraySizeException extends Throwable{
+public class MyArraySizeException extends Exception{
 }

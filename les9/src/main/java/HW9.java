@@ -5,6 +5,8 @@ public class HW9 {
                           {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
 
         checkMyArraySizeException(arr);
+
+        System.out.println(summArray(arr));
     }
 
     private static void checkMyArraySizeException(String[][] arr) throws MyArraySizeException {
@@ -18,16 +20,24 @@ public class HW9 {
                 throw new MyArraySizeException();
             }
         }
-        summArray(arr);
+        checkMyArrayDataException(arr);
     }
 
-    private static void summArray(String[][] array) {
-        String s;
+    private static void checkMyArrayDataException(String[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                Integer.parseInt(arr[i][j]);
+            }
+        }
+    }
+
+    private static int summArray(String[][] array) {
         int summ = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                summ += Integer.parseInt(array[i][j]);
+                   summ += Integer.parseInt(array[i][j]);
             }
         }
+        return summ;
     }
 }
