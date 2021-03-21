@@ -1,12 +1,22 @@
 public class HW9 {
 
-    public static void main(String[] args) throws MyArraySizeException {
+    public static void main(String[] args){
         String[][] arr = {{"1", "2", "3", "4"}, {"5", "6", "7", "8"},
                           {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
 
-        checkMyArraySizeException(arr);
+        try {
+            checkMyArraySizeException(arr);
+        } catch (MyArraySizeException e) {
+            e.printStackTrace();
+        }
 
-        System.out.println(summArray(arr));
+        try {
+            checkMyArrayDataException(arr);
+        } catch (MyArrayDataException e) {
+            e.printStackTrace();
+        }
+
+//        System.out.println(summArray(arr));
     }
 
     private static void checkMyArraySizeException(String[][] arr) throws MyArraySizeException {
@@ -20,13 +30,19 @@ public class HW9 {
                 throw new MyArraySizeException();
             }
         }
-        checkMyArrayDataException(arr);
+
     }
 
-    private static void checkMyArrayDataException(String[][] arr) {
+    private static void checkMyArrayDataException(String[][] arr) throws MyArrayDataException {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                Integer.parseInt(arr[i][j]);
+                try {
+                    Integer.parseInt(arr[i][j]);
+                } catch (NumberFormatException e) {
+                    System.out.printf("не верное наполнение ячееки [%d][%d]", i, j);
+                    throw new MyArrayDataException();
+                }
+
             }
         }
     }
