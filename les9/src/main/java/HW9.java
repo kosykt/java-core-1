@@ -35,7 +35,6 @@ public class HW9 {
                     Integer.parseInt(arr[i][j]);
                 } catch (NumberFormatException e) {
                     System.out.printf("не верное наполнение ячееки [%d][%d]", i, j);
-                    arr[i][j] = String.valueOf(0);
                     throw new MyArrayDataException();
                 }
             }
