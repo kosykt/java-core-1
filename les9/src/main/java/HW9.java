@@ -2,56 +2,46 @@ public class HW9 {
 
     public static void main(String[] args){
         String[][] arr = {{"1", "2", "3", "4"}, {"5", "6", "7", "8"},
-                          {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
-
+                          {"9", "10", "11", "12", "1"}, {"13", "14", "15", "16l"}};
         try {
-            checkMyArraySizeException(arr);
-        } catch (MyArraySizeException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            checkMyArrayDataException(arr);
+            try {
+                int summ = checkMyArray(arr);
+                System.out.println(summ);
+            } catch (MyArraySizeException e) {
+                e.printStackTrace();
+            }
         } catch (MyArrayDataException e) {
             e.printStackTrace();
         }
-
-//        System.out.println(summArray(arr));
     }
 
-    private static void checkMyArraySizeException(String[][] arr) throws MyArraySizeException {
+    private static int checkMyArray(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         if (arr.length != 4){
-            System.out.println("не верная длина массива");
+            System.out.println("не верное количество внутренних одномерных массивов\n");
             throw new MyArraySizeException();
         }
         for (int i = 0; i < 4; i++) {
             if (arr[i].length != 4){
-                System.out.println("не верное колличество ячеек");
+                System.out.printf("не верное колличество ячеек в %d-м внутреннем массиве\n", i);
                 throw new MyArraySizeException();
             }
         }
-
-    }
-
-    private static void checkMyArrayDataException(String[][] arr) throws MyArrayDataException {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 try {
                     Integer.parseInt(arr[i][j]);
                 } catch (NumberFormatException e) {
-                    System.out.printf("не верное наполнение ячееки [%d][%d]", i, j);
+                    System.out.printf("не верное наполнение ячееки [%d][%d]\n", i, j);
+                    arr[i][j] = String.valueOf(0);
                     throw new MyArrayDataException();
                 }
 
             }
         }
-    }
-
-    private static int summArray(String[][] array) {
         int summ = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                   summ += Integer.parseInt(array[i][j]);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                summ += Integer.parseInt(arr[i][j]);
             }
         }
         return summ;
