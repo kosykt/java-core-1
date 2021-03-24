@@ -1,30 +1,44 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class HW10 {
 
     public static void main(String[] args) {
-        ArrayList<String> s = new ArrayList<>(16);
+        List<String> myString = new ArrayList<>(16);
 
-        s.add("aaa");s.add("bbb");s.add("ccc");s.add("ddd");s.add("eee");
-        s.add("fff");s.add("ggg");s.add("hhh");s.add("iii");s.add("jjj");
+        myString.add("aaa");myString.add("bbb");myString.add("ccc");myString.add("ddd");myString.add("eee");
+        myString.add("fff");myString.add("ggg");myString.add("hhh");myString.add("iii");myString.add("jjj");
 
-        s.add("WWW");s.add("WWW");s.add("WWW");
+        myString.add("WWW");myString.add("WWW");myString.add("WWW");
 
-        s.add("XXX");s.add("XXX");s.add("XXX");
+        myString.add("XXX");myString.add("XXX");myString.add("XXX");
 
-        System.out.println(s);
 
-        Iterator<String> iterator = s.iterator();
-        while (iterator.hasNext()) {
-            String str = iterator.next();
+
+        Iterator<String> iter = myString.iterator();
+        ListIterator<String> listIter = myString.listIterator();
+        //вариант 1
+        while (iter.hasNext()){
+            System.out.println(1);
+        }
+        //вариант 2
+        while (listIter.hasPrevious()){
+            System.out.println(2);
+        }
+        //вариант 3
+        while (iter.hasNext()){
+            String str = iter.next();
             if (str.equals("aaa")) {
-                iterator.remove();
+                iter.remove();
+            }
+        }
+        //вариант 4
+        while (listIter.hasNext()){
+            String str = listIter.previous();
+            if (str.equals("bbb")){
+                iter.remove();
             }
         }
 
-        System.out.println(s);
+        System.out.println(myString);
     }
 }
