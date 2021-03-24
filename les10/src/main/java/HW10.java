@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class HW10 {
 
@@ -11,10 +10,18 @@ public class HW10 {
         myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");
         myString.add("XXX");myString.add("XXX");myString.add("XXX");
 
-        unique(myString);
+        numWords(myString);
+        uniqWords(myString);
     }
 
-    private static void unique(List<String> myString) {
+    private static void numWords(List<String> myString) {
+        Set<String> num = new HashSet<>(myString);
+        for (String i : num) {
+            System.out.println(i + " встречается: " + Collections.frequency(myString, i));
+        }
+    }
+
+    private static void uniqWords(List<String> myString) {
         try {
             for (int i = 0; i < myString.size(); i++) {
                 String strP = myString.get(i);
