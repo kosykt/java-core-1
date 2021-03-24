@@ -17,12 +17,14 @@ public class HW10 {
 
         System.out.println(s);
 
-        String[] arr = new String[s.size()];
-        s.toArray(arr);
+        Iterator<String> iterator = s.iterator();
+        while (iterator.hasNext()) {
+            String str = iterator.next();
+            if (str.equals("aaa")) {
+                iterator.remove();
+            }
+        }
 
-        System.out.println(Arrays.toString(arr));
-
-
-
+        System.out.println(s);
     }
 }
