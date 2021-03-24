@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HW10 {
+public class HW10_1 {
 
     public static void main(String[] args) {
         List<String> myString = new ArrayList<>(19);
