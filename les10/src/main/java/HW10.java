@@ -4,7 +4,7 @@ import java.util.List;
 public class HW10 {
 
     public static void main(String[] args) {
-        List<String> myString = new ArrayList<>(16);
+        List<String> myString = new ArrayList<>(19);
 
         myString.add("aaa");myString.add("bbb");myString.add("ccc");myString.add("ddd");myString.add("eee");
         myString.add("fff");myString.add("ggg");myString.add("hhh");myString.add("iii");myString.add("jjj");
