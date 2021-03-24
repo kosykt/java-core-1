@@ -1,3 +1,3 @@
-public class Les10 {
+public class HW10 {
     
 }
