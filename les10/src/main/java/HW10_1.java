@@ -3,7 +3,7 @@ import java.util.*;
 public class HW10_1 {
 
     public static void main(String[] args) {
-        List<String> myString = new ArrayList<>(19);
+        List<String> myString = new ArrayList<>(20);
 
         myString.add("VVV");myString.add("VVV");myString.add("VVV");myString.add("VVV");myString.add("VVV");
         myString.add("aaa");myString.add("bbb");myString.add("ccc");myString.add("ddd");myString.add("eee");
