@@ -7,8 +7,7 @@ public class HW10_1 {
 
         myString.add("aaa");myString.add("bbb");myString.add("ccc");myString.add("ddd");myString.add("eee");
         myString.add("fff");myString.add("ggg");myString.add("hhh");myString.add("iii");myString.add("jjj");
-        myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");
-        myString.add("XXX");myString.add("XXX");myString.add("XXX");
+        myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");myString.add("WWW");
 
         numWords(myString);
         uniqWords(myString);
@@ -22,16 +21,12 @@ public class HW10_1 {
     }
 
     private static void uniqWords(List<String> myString) {
-        try {
-            for (int i = 0; i < myString.size(); i++) {
-                String strP = myString.get(i);
-                String strN = myString.get(i + 1);
-                if (strN == strP){
-                    myString.remove(i);
-                    i--;
+        Set<String> unicW = new HashSet<>();
+        myString.stream().forEach(s -> {
+                if (!unicW.contains(s)) {
+                    unicW.add(s);
                 }
-            }
-        }catch (Exception e){ }
-        System.out.println(myString);
+        });
+        System.out.println(unicW);
     }
 }
