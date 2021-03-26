@@ -1,13 +1,19 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class HW10_2 {
 
     public static void main(String[] args) {
-        List<PhoneBook> phoneBookList = new ArrayList<>(Arrays.asList(
-                new PhoneBook("AAA", 111),
-                new PhoneBook("BBB", 222),
-                new PhoneBook("CCC", 333)));
+
+        PhoneBook phonebook = new PhoneBook();
+
+        phonebook.add(1111, "Ivanov");
+        phonebook.add(2222, "Vasilev");
+        phonebook.add(3333, "Petrov");
+        phonebook.add(4444, "Sidorov");
+        phonebook.add(5555, "Mikhailov");
+        phonebook.add(1324, "Ivanov");
+
+        phonebook.get("Ivanov");
+        phonebook.get("Petrov");
+        phonebook.get("Sidorov");
+        phonebook.get("Trump");
     }
 }
