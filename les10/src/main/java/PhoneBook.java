@@ -14,6 +14,10 @@ public class PhoneBook {
     }
 
     public void get(String name){
-        System.out.println(phonebook.get(name));
+        if (phonebook.get(name) == null){
+            System.out.println(name + " отсутсвует в списке");
+        }else {
+            System.out.println(name + " : " + phonebook.get(name));
+        }
     }
 }

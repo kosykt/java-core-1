@@ -9,7 +9,6 @@ public class HW10_2 {
         phonebook.add("Petrov", 789);
         phonebook.add("Sidorov", 987);
         phonebook.add("Mikhailov", 654);
-        phonebook.add("Ivanov", 231);
 
         phonebook.get("Ivanov");
         phonebook.get("Petrov");
