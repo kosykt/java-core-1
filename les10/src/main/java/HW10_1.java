@@ -34,6 +34,7 @@ public class HW10_1 {
                 }
             }
         });
-        System.out.println(uniq);
+        System.out.println("не повторяющиеся символы: " + uniq);
+        System.out.println("повторяющиеся символы: " + notUniq);
     }
 }
