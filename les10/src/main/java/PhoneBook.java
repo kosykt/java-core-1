@@ -1,14 +1,32 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
+
+    class NumList{
+        private List<Integer> numList;
+
+        public NumList(){
+            numList = new ArrayList<>();
+        }
+
+        public void addNum(Integer num){
+            numList.add(num);
+        }
+
+        public int getNum(){
+            return numList.get(1);
+        }
+    }
 
     private Map<String, Integer> phonebook;
 
     public PhoneBook(){
         phonebook = new HashMap<>();
     }
-
+//              add(String name, список телефонов)
     public void add(String name, Integer number){
         phonebook.put(name, number);
     }
@@ -20,4 +38,6 @@ public class PhoneBook {
             System.out.println(name + " : " + phonebook.get(name));
         }
     }
+
+
 }
