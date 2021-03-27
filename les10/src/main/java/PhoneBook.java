@@ -17,7 +17,7 @@ public class PhoneBook {
 //        }
 //
 //        public int getNum(){
-//            return numList.get(1);
+//            return numList.get();
 //        }
 //    }
 
@@ -31,7 +31,7 @@ public class PhoneBook {
     public void add(String name, Integer number){
         phonebook.put(name, number);
     }
-
+//      работает но не показывает дубликаты Value
     public void get(String name){
         if (phonebook.get(name) == null){
             System.out.println(name + " отсутсвует в списке");
@@ -39,6 +39,4 @@ public class PhoneBook {
             System.out.println(name + " : " + phonebook.get(name));
         }
     }
-
-
 }

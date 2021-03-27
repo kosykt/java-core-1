@@ -5,7 +5,7 @@ public class HW10_2 {
         PhoneBook phonebook = new PhoneBook();
 
         phonebook.add("Ivanov", 123);
-//        перезаписывает value
+//        перезаписывает value?
         phonebook.add("Ivanov", 555);
         phonebook.add("Vasilev", 456);
         phonebook.add("Petrov", 789);
