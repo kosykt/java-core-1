@@ -35,11 +35,8 @@ public class PhoneBook {
     public void get(String name){
         if (phonebook.get(name) == null){
             System.out.println(name + " отсутсвует в списке");
-//        }else {
-//            System.out.println(name + " : " + phonebook.get(name));
-//            что-то подобное
-        }else if (phonebook.containsKey(name)){
-            System.out.println(phonebook.values().toString());
+        }else {
+            System.out.println(name + " : " + phonebook.get(name));
         }
     }
 
