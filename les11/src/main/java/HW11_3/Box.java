@@ -14,4 +14,8 @@ public class Box<T> {
     public boolean addIn(T fruit){
         return fruits.add(fruit);
     }
+
+    public Double getWeight(double m){
+        return (fruits.size() * m);
+    }
 }

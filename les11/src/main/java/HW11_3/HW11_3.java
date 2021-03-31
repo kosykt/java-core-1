@@ -7,10 +7,19 @@ public class HW11_3 {
         Box<Apple> appleBox = new Box();
         Box<Orange> orangeBox = new Box();
 
-        Apple a1 = new Apple(1.0);
-        appleBox.addIn(a1);
-        Orange o1 = new Orange(1.2);
-        orangeBox.addIn(o1);
 
+        appleBox.addIn(new Apple());
+        appleBox.addIn(new Apple());
+        appleBox.addIn(new Apple());
+
+        orangeBox.addIn(new Orange());
+        orangeBox.addIn(new Orange());
+        orangeBox.addIn(new Orange());
+        orangeBox.addIn(new Orange());
+        orangeBox.addIn(new Orange());
+
+
+        System.out.println(appleBox.getWeight(new Apple().getMass()));
+        System.out.println(orangeBox.getWeight(new Orange().getMass()));
     }
 }
