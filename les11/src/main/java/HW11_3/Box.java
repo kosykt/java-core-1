@@ -15,8 +15,8 @@ public class Box<T> {
         return fruits.add(fruit);
     }
 
-    public Double getWeight(Fruit m){
-        return (fruits.size() * m.getMass());
+    public Double getWeight(Fruit f){
+        return (fruits.size() * f.getMass());
     }
 
     public static <A> Box<A> create(){
@@ -30,11 +30,11 @@ public class Box<T> {
         return box;
     }
 
-//    public static <A> String compare(Box<A> box1, Box<A> box2){
-//        if (box1.getWeight(1) > box2.getWeight(1)){
-//            return "Первая коробка больше";
-//        }else {
-//            return "Вторая коробка больше";
-//        }
-//    }
+    public static <A> String compare(Box<A> box1, Box<A> box2, Fruit f){
+        if (box1.getWeight(f) > box2.getWeight(f)){
+            return "Первая коробка больше";
+        }else {
+            return "Вторая коробка больше";
+        }
+    }
 }

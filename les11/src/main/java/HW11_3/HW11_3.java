@@ -10,10 +10,11 @@ public class HW11_3 {
         Box<Apple> appleBox2 = Box.putIn(Box.create(), new Apple(),5);
 
 //        String s = Box.compare(appleBox1, appleBox2);
-//        System.out.println(Box.compare(appleBox1, appleBox2));
+        System.out.println(Box.compare(appleBox1, appleBox2, new Apple()));
 
-        System.out.println(appleBox1.getWeight());
-        System.out.println(appleBox2.getWeight());
+
+        System.out.println(appleBox1.getWeight(new Apple()));
+//        System.out.println(appleBox2.getWeight());
 
 
 //        Box<Apple> appleBox = new Box();
