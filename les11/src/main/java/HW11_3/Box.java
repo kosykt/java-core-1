@@ -30,8 +30,8 @@ public class Box<T> {
         return box;
     }
 
-    public static <A, B> String compare(Box<A> box1, Box<B> box2){
-        if (box1.getWeight(A) > box2.getWeight(B)){
+    public static String compare(Double box1, Double box2){
+        if (box1 > box2){
             return "Первая коробка больше";
         }else {
             return "Вторая коробка больше";
