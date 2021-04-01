@@ -9,6 +9,9 @@ public class HW11_3 {
 
         Box<Apple> appleBox2 = Box.putIn(Box.create(), new Apple(),5);
 
+        String s = Box.compare(appleBox1, appleBox2);
+        System.out.println(Box.compare(appleBox1, appleBox2));
+
 
 
 //        Box<Apple> appleBox = new Box();
