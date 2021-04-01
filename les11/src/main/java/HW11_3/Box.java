@@ -18,4 +18,15 @@ public class Box<T> {
     public Double getWeight(double m){
         return (fruits.size() * m);
     }
+
+    public static <A> Box<A> create(){
+        return new Box<A>();
+    }
+
+    public static <A> Box<A> putIn(Box<A> box, A fruit, int m){
+        for (int i = 0; i < m; i++) {
+            box.addIn(fruit);
+        }
+        return box;
+    }
 }
