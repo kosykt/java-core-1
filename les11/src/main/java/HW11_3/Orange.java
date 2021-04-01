@@ -1,10 +1,13 @@
 package HW11_3;
 
 public class Orange extends Fruit{
+    @Override
+    protected Double mass() {
+        return 1.5;
+    }
 
-    private final double mass = 1.5;
-
-    public double getMass() {
-        return mass;
+    @Override
+    protected Double getMass() {
+        return super.getMass();
     }
 }

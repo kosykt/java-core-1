@@ -1,10 +1,13 @@
 package HW11_3;
 
 public class Apple extends Fruit {
+    @Override
+    protected Double mass() {
+        return 1.0;
+    }
 
-    private final double mass = 1.0;
-
-    public double getMass() {
-        return mass;
+    @Override
+    protected Double getMass() {
+        return super.getMass();
     }
 }
