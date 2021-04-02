@@ -15,7 +15,12 @@ public class Box<T extends Fruit> {
         return fruits.add(fruit);
     }
 
+    public Fruit ret(){
+        return fruits.get(0);
+    }
+
     public Double getWeight(Fruit f){
+
         return (fruits.size() * f.getMass());
     }
 

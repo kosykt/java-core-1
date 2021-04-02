@@ -15,5 +15,14 @@ public class HW11_3 {
 
         System.out.println(Box.compare(orangeBox1.getWeight(new Orange()), appleBox2.getWeight(new Apple())));
 
+        appleBox1.ret();
+        if(orangeBox1.ret() instanceof Orange){
+            System.out.println(1234566);
+        }
+
+        shift(appleBox1, appleBox2);
+    }
+
+    private static void shift(Box box1, Box box2) {
     }
 }
