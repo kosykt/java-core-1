@@ -15,17 +15,26 @@ public class HW11_3 {
 
         System.out.println(Box.compare(orangeBox1.getWeight(new Orange()), appleBox2.getWeight(new Apple())));
 
-//        appleBox1.ret();
-//        if(orangeBox1.ret() instanceof Orange){
-//            System.out.println(1234566);
-//        }
-
-        shift(appleBox1, appleBox2);
+        shift(appleBox1, orangeBox2);
     }
 
     private static void shift(Box box1, Box box2) {
-        if ((box1.ret() instanceof Apple && box2.ret() instanceof Apple) || (box1.ret() instanceof Orange && box2.ret() instanceof Orange)){
-            System.out.println();
+        if (box1.ret() instanceof Apple && box2.ret() instanceof Apple){
+            int num = box1.getSize();
+            box1.clearBox();
+            for (int i = 0; i < num; i++) {
+                box2.addIn(new Apple());
+            }
+            System.out.println(box2.getSize());
+        }else if (box1.ret() instanceof Orange && box2.ret() instanceof Orange){
+            int num = box1.getSize();
+            box1.clearBox();
+            for (int i = 0; i < num; i++) {
+                box2.addIn(new Orange());
+            }
+            System.out.println(box2.getSize());
+        }else {
+            System.out.println("содержимое коробок разное");
         }
     }
 }

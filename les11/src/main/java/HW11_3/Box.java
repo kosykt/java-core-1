@@ -19,6 +19,14 @@ public class Box<T extends Fruit> {
         return fruits.get(0);
     }
 
+    public int getSize(){
+        return fruits.size();
+    }
+
+    public void clearBox(){
+        fruits.clear();
+    }
+
     public Double getWeight(Fruit f){
 
         return (fruits.size() * f.getMass());
