@@ -1,3 +1,4 @@
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -18,23 +19,17 @@ public class HW12 {
 
 class Counter{
 
-    private long count;
-    private final Lock lock = new ReentrantLock();
+    private final AtomicLong count = new AtomicLong();
 
     public Counter() {
     }
 
     public long getNextId() {
-            try {
-                lock.lock();
-                return count++;
-            }finally {
-                lock.unlock();
-            }
+        return count.incrementAndGet();
     }
 
     public long getCount() {
-        return count;
+        return count.get();
     }
 }
 
