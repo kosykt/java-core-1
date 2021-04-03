@@ -1,3 +1,6 @@
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class HW12 {
 
     public static void main(String[] args) throws InterruptedException {
@@ -16,16 +19,18 @@ public class HW12 {
 class Counter{
 
     private long count;
-    private final Object monitor;
+    private Lock lock = new ReentrantLock();
 
     public Counter() {
-        this.monitor = new Object();
     }
 
     public long getNextId() {
-        synchronized (monitor) { //синхронизированный блок
-            return count++;
-        }
+            try {
+                lock.lock();
+                return count++;
+            }finally {
+                lock.unlock();
+            }
     }
 
     public long getCount() {
