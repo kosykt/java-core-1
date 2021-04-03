@@ -19,17 +19,17 @@ public class HW12 {
 
 class Counter{
 
-    private final AtomicLong count = new AtomicLong();
+    private volatile long count;
 
     public Counter() {
     }
 
-    public long getNextId() {
-        return count.incrementAndGet();
+    public synchronized long getNextId() {
+        return count++;
     }
 
     public long getCount() {
-        return count.get();
+        return count;
     }
 }
 
