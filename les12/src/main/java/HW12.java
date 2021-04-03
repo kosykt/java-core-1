@@ -16,13 +16,20 @@ public class HW12 {
 class Counter{
 
     private long count;
+    private final Object monitor;
 
-    public long getCount() {
-        return count;
+    public Counter() {
+        this.monitor = new Object();
     }
 
     public long getNextId() {
-        return count++;
+        synchronized (monitor) { //синхронизированный блок
+            return count++;
+        }
+    }
+
+    public long getCount() {
+        return count;
     }
 }
 
