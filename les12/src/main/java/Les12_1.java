@@ -2,7 +2,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class HW12 {
+public class Les12_1 {
 
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();
