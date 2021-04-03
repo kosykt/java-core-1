@@ -19,7 +19,7 @@ public class HW12 {
 class Counter{
 
     private long count;
-    private Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
 
     public Counter() {
     }
