@@ -1,18 +1,16 @@
 package HW12;
 
-import java.util.Arrays;
-
 public class HW12 {
 
     public static void main(String[] args) {
-        HW12 wh = new HW12();
+        HW12 hw = new HW12();
 
-        new Thread(() -> wh.MyThreadOne()).start();
-        new Thread(() -> wh.MyThreadTwo()).start();
+        new Thread(() -> hw.MyThreadOne()).start();
+        new Thread(() -> hw.MyThreadTwo()).start();
     }
 
-    public void MyThreadOne(){
-        int SIZE = 10;
+    public void MyThreadOne() {
+        int SIZE = 10000000;
         float[] arr = new float[SIZE];
         int num = 1;
 
@@ -23,14 +21,14 @@ public class HW12 {
         long a = System.currentTimeMillis();
 
         for (int i = 0; i < SIZE; i++) {
-            arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+            arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
 
-//        System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
+        System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
     }
 
-    public void MyThreadTwo(){
-        int SIZE = 10;
+    public void MyThreadTwo() {
+        int SIZE = 10000000;
         int HALF = SIZE / 2;
         float[] arrOriginal = new float[SIZE];
 
@@ -45,15 +43,16 @@ public class HW12 {
 
         long a = System.currentTimeMillis();
 
-        System.arraycopy(arrOriginal,0, arrHalf1,0, arrHalf1.length);
+        System.arraycopy(arrOriginal, 0, arrHalf1, 0, arrHalf1.length);
         System.arraycopy(arrOriginal, arrHalf1.length, arrHalf2, 0, arrHalf2.length);
 
-//        for (int i = 0; i < SIZE; i++) {
-//            arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-//        }
+        System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
+    }
 
-//        System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
+    public float[] Calculate(float[] a){
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (float)(a[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+        }
+        return a;
     }
 }
-
-
