@@ -12,17 +12,14 @@ public class HW12 {
     public void MyThreadOne() {
         int SIZE = 10000000;
         float[] arr = new float[SIZE];
-        int num = 1;
 
         for (int i = 0; i < SIZE; i++) {
-            arr[i] = num;
+            arr[i] = 1.0f;
         }
 
         long a = System.currentTimeMillis();
 
-        for (int i = 0; i < SIZE; i++) {
-            arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-        }
+        calculate(arr);
 
         System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
     }
@@ -35,10 +32,8 @@ public class HW12 {
         float[] arrHalf1 = new float[HALF];
         float[] arrHalf2 = new float[HALF];
 
-        int num = 1;
-
         for (int i = 0; i < SIZE; i++) {
-            arrOriginal[i] = num;
+            arrOriginal[i] = 1.0f;
         }
 
         long a = System.currentTimeMillis();
@@ -47,5 +42,11 @@ public class HW12 {
         System.arraycopy(arrOriginal, arrHalf1.length, arrHalf2, 0, arrHalf2.length);
 
         System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
+    }
+
+    public float[] calculate(float[] arr) {
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = (float) (arr[i] * Math.sin(0.2f + arr[i] / 5) * Math.cos(0.2f + arr[i] / 5) * Math.cos(0.4f + arr[i] / 2));
+        return arr;
     }
 }
