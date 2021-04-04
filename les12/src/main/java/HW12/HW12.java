@@ -1,7 +1,5 @@
 package HW12;
 
-import java.util.Arrays;
-
 public class HW12 {
 
     public static void main(String[] args) {
@@ -13,20 +11,19 @@ public class HW12 {
 
     public void MyThreadOne(){
         int SIZE = 10;
-        int HALF = SIZE / 2;
         float[] arr = new float[SIZE];
         int num = 1;
-        long a = System.currentTimeMillis();
 
         for (int i = 0; i < SIZE; i++) {
             arr[i] = num;
         }
 
+        long a = System.currentTimeMillis();
         for (int i = 0; i < SIZE; i++) {
             arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
-        System.out.print("Время первого потока(t1): " + (System.currentTimeMillis() - a));
-        System.out.println();
+
+        System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
     }
 
     public void MyThreadTwo(){
@@ -34,17 +31,18 @@ public class HW12 {
         int HALF = SIZE / 2;
         float[] arr = new float[SIZE];
         int num = 1;
-        long a = System.currentTimeMillis();
+
 
         for (int i = 0; i < SIZE; i++) {
             arr[i] = num;
         }
 
+        long a = System.currentTimeMillis();
         for (int i = 0; i < SIZE; i++) {
             arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
-        System.out.print("Время второго потока(t2): " + (System.currentTimeMillis() - a));
-        System.out.println();
+
+        System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
     }
 }
 
