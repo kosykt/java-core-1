@@ -46,23 +46,6 @@ public class HW12 {
         System.arraycopy(arrOriginal, 0, arrHalf1, 0, arrHalf1.length);
         System.arraycopy(arrOriginal, arrHalf1.length, arrHalf2, 0, arrHalf2.length);
 
-        Calc c = new Calc();
-        new Thread(() -> c.Calculate(arrHalf1, "one")).start();
-        new Thread(() -> c.Calculate(arrHalf2, "two")).start();
-
         System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
-    }
-
-
-}
-
-class Calc{
-    public float[] Calculate(float[] array, String s) {
-        System.out.println(s);
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (float)(array[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-        }
-        System.out.println("end");
-        return array;
     }
 }
