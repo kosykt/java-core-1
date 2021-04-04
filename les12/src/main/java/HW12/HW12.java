@@ -1,5 +1,7 @@
 package HW12;
 
+import java.util.Arrays;
+
 public class HW12 {
 
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class HW12 {
     }
 
     public void MyThreadOne() {
-        int SIZE = 10000000;
+        int SIZE = 10;
         float[] arr = new float[SIZE];
 
         for (int i = 0; i < SIZE; i++) {
@@ -18,14 +20,15 @@ public class HW12 {
         }
 
         long a = System.currentTimeMillis();
-
+        System.out.println(Arrays.toString(arr));
         calculate(arr);
+        System.out.println(Arrays.toString(arr));
 
         System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
     }
 
     public void MyThreadTwo() {
-        int SIZE = 10000000;
+        int SIZE = 10;
         int HALF = SIZE / 2;
         float[] arrOriginal = new float[SIZE];
 
@@ -37,11 +40,8 @@ public class HW12 {
         }
 
         long a = System.currentTimeMillis();
-
-        System.arraycopy(arrOriginal, 0, arrHalf1, 0, arrHalf1.length);
-        System.arraycopy(arrOriginal, arrHalf1.length, arrHalf2, 0, arrHalf2.length);
-
-        System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
+        
+//        System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
     }
 
     public float[] calculate(float[] arr) {
