@@ -2,7 +2,7 @@ package HW12;
 
 public class HW12 {
 
-    int SIZE = 10;
+    int SIZE = 10000000;
     int HALF = SIZE / 2;
 
     public static void main(String[] args) {
@@ -11,12 +11,6 @@ public class HW12 {
 
         new Thread(() -> hw.MyThreadOne()).start();
         new Thread(() -> hw.MyThreadTwo()).start();
-    }
-
-    public float[] calculate(float[] arr) {
-        for (int i = 0; i < arr.length; i++)
-            arr[i] = (float) (arr[i] * Math.sin(0.2f + arr[i] / 5) * Math.cos(0.2f + arr[i] / 5) * Math.cos(0.4f + arr[i] / 2));
-        return arr;
     }
 
     public void MyThreadOne() {
@@ -29,7 +23,13 @@ public class HW12 {
 
         long a = System.currentTimeMillis();
 
-        calculate(arr);
+        Thread t = new Thread(new MyRunnable(arr));
+        t.start();
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("Время первого потока(t1): " + (System.currentTimeMillis() - a));
     }
@@ -46,6 +46,33 @@ public class HW12 {
 
         long a = System.currentTimeMillis();
 
+        Thread t1 = new Thread(new MyRunnable(arrHalf1));
+        Thread t2 = new Thread(new MyRunnable(arrHalf2));
+        t1.start();
+        t2.start();
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
+    }
+}
+
+class MyRunnable implements Runnable {
+
+    private float[] arr;
+
+    public MyRunnable(float[] arr) {
+        this.arr = arr;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (float) (arr[i] * Math.sin(0.2f + arr[i] / 5) * Math.cos(0.2f + arr[i] / 5) * Math.cos(0.4f + arr[i] / 2));
+        }
     }
 }
