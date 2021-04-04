@@ -2,7 +2,7 @@ package HW12;
 
 public class HW12 {
 
-    int SIZE = 10;
+    int SIZE = 10000000;
     int HALF = SIZE / 2;
     float NUM = 1.0f;
 
@@ -39,17 +39,16 @@ public class HW12 {
 
     public void MyThreadTwo(){
 
-
         float[] arr = new float[SIZE];
 
         float[] arrHalf1 = new float[HALF];
         float[] arrHalf2 = new float[HALF];
 
-        long a = System.currentTimeMillis();
-
         for (int i = 0; i < SIZE; i++) {
             arr[i] = NUM;
         }
+
+        long a = System.currentTimeMillis();
 
         System.arraycopy(arr, 0, arrHalf1, 0, arrHalf1.length);
         System.arraycopy(arr, arrHalf1.length, arrHalf2,0 , arrHalf2.length);
