@@ -1,7 +1,5 @@
 package HW12;
 
-import java.util.Arrays;
-
 public class HW12 {
 
     int SIZE = 10;
@@ -70,11 +68,8 @@ public class HW12 {
             e.printStackTrace();
         }
 
-        arrHalf1 = thr1.getArr();
-        arrHalf2 = thr2.getArr();
-
-        System.arraycopy(arrHalf1, 0, arr, 0, arrHalf1.length);
-        System.arraycopy(arrHalf2, 0, arr, arrHalf1.length, arrHalf2.length);
+        System.arraycopy(thr1.getArr(), 0, arr, 0, HALF);
+        System.arraycopy(thr2.getArr(), 0, arr, HALF, HALF);
 
         System.out.println("Время второго потока(t2): " + (System.currentTimeMillis() - a));
     }
