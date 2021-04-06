@@ -2,7 +2,7 @@ package HW12;
 
 public class HW12 {
 
-    int SIZE = 10000000;
+    int SIZE = 100000000;
     int HALF = SIZE / 2;
     float NUM = 1.0f;
 
