@@ -1,26 +1,37 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.CyclicBarrier;
 
 public class HW13 {
 
-    public static final int CARS_COUNT = 1;
+    public static final int CARS_COUNT = 5;
 
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
 
-        Race race = new Race(new Road(60), new Tunnel(100));
+        Race race = new Race(new Road(60));
         Car[] cars = new Car[CARS_COUNT];
 
         for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car(race, 20 + (int) (Math.random() * 10));
         }
 
-        for (int i = 0; i < cars.length; i++) {
-            new Thread(cars[i]).start();
+        CyclicBarrier cb = new CyclicBarrier(CARS_COUNT);
+        for (int i = 0; i < CARS_COUNT; i++) {
+            final int w = i;
+            new Thread(() -> {
+                try {
+                    new Thread(cars[w]).start();
+                    System.out.println("Участник #" + (w + 1) + " готов");
+                    cb.await();
+                    if (cb.await() == CARS_COUNT - 1){
+                        System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
         }
-
-        System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
-        System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
     }
 }
 
@@ -46,9 +57,7 @@ class Car implements Runnable {
     @Override
     public void run() {
         try {
-            System.out.println(this.name + " готовится");
             Thread.sleep(500 + (int)(Math.random() * 800));
-            System.out.println(this.name + " готов");
         } catch (Exception e) {
             e.printStackTrace();
         }
