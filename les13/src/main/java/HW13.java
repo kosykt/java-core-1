@@ -3,11 +3,11 @@ import java.util.Arrays;
 
 public class HW13 {
 
-    public static final int CARS_COUNT = 4;
+    public static final int CARS_COUNT = 1;
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
 
-        Race race = new Race(new Road(60), new Tunnel(), new Road(40));
+        Race race = new Race(new Road(60), new Tunnel(100));
         Car[] cars = new Car[CARS_COUNT];
 
         for (int i = 0; i < cars.length; i++) {
@@ -17,7 +17,7 @@ public class HW13 {
         for (int i = 0; i < cars.length; i++) {
             new Thread(cars[i]).start();
         }
-        
+
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
     }
@@ -73,23 +73,23 @@ class Road extends Stage {
         try {
             System.out.println(c.getName() + " начал этап: " + description);
             Thread.sleep(length / c.getSpeed() * 1000);
-            System.out.println(c.getName() + " закончил этап: " + description);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }finally {
+            System.out.println(c.getName() + " закончил этап: " + description);
         }
     }
 }
 
 class Tunnel extends Stage {
-    public Tunnel() {
-        this.length = 80;
+    public Tunnel(int length) {
+        this.length = length;
         this.description = "Тоннель " + length + " метров";
     }
     @Override
     public void go(Car c) {
         try {
             try {
-                System.out.println(c.getName() + " готовится к этапу(ждет): " + description);
                 System.out.println(c.getName() + " начал этап: " + description);
                 Thread.sleep(length / c.getSpeed() * 1000);
             } catch (InterruptedException e) {
@@ -105,7 +105,9 @@ class Tunnel extends Stage {
 
 class Race {
     private ArrayList<Stage> stages;
-    public ArrayList<Stage> getStages() { return stages; }
+    public ArrayList<Stage> getStages() {
+        return stages;
+    }
     public Race(Stage... stages) {
         this.stages = new ArrayList<>(Arrays.asList(stages));
     }
