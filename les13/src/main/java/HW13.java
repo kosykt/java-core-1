@@ -4,6 +4,7 @@ import java.util.Arrays;
 public class HW13 {
 
     public static final int CARS_COUNT = 1;
+
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
 
@@ -22,11 +23,14 @@ public class HW13 {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
     }
 }
+
 class Car implements Runnable {
+
     private static int CARS_COUNT;
     private Race race;
     private int speed;
     private String name;
+
     public String getName() {
         return name;
     }
@@ -55,8 +59,10 @@ class Car implements Runnable {
 }
 
 abstract class Stage {
+
     protected int length;
     protected String description;
+
     public String getDescription() {
         return description;
     }
@@ -64,6 +70,7 @@ abstract class Stage {
 }
 
 class Road extends Stage {
+
     public Road(int length) {
         this.length = length;
         this.description = "Дорога " + length + " метров";
@@ -82,6 +89,7 @@ class Road extends Stage {
 }
 
 class Tunnel extends Stage {
+
     public Tunnel(int length) {
         this.length = length;
         this.description = "Тоннель " + length + " метров";
@@ -105,6 +113,7 @@ class Tunnel extends Stage {
 
 class Race {
     private ArrayList<Stage> stages;
+
     public ArrayList<Stage> getStages() {
         return stages;
     }
