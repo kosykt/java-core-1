@@ -4,40 +4,27 @@ public class Les13 {
     public static void main(String[] args) {
         Les13 sp = new Les13();
         sp.run();
-
     }
 
     private void run() {
-        StoppableThread t = new StoppableThread();
-        Thread thread = new Thread(t);
-        thread.start();
+        InterruptdThread interruptdThread = new InterruptdThread();
+        interruptdThread.start();
         try {
-            //работа
-            Thread.sleep(2000);
+            Thread.sleep(50);
+            interruptdThread.interrupt();
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        t.disable();
     }
 }
 
-class StoppableThread implements Runnable{
-
-    private boolean active = true;
-
-    public void disable(){
-        active = false;
-    }
+class InterruptdThread extends Thread{
     @Override
     public void run() {
         int count = 0;
-        while (active){
+        while (!isInterrupted()){
             System.out.println(count++);
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
