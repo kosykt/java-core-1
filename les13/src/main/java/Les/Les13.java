@@ -1,29 +1,27 @@
 package Les;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.Arrays;
+import java.util.concurrent.*;
 
 public class Les13 {
     public static void main(String[] args) {
 
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
 
-        Runnable runnable = () -> {
-            System.out.println("Hello " + Thread.currentThread().getName());
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        };
+        int[] a = {1,2,3,4,5,6,7,8,9};
 
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
-        fixedThreadPool.execute(runnable);
+        Callable<Integer> task = () -> Arrays.stream(a).sum();
+        Future<Integer> submit = fixedThreadPool.submit(task);
+
+        submit.isDone();
+        try {
+            Integer i = submit.get();
+            System.out.println(i);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
         fixedThreadPool.shutdown();
     }
