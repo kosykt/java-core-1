@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class HW13 {
 
-    public static final int CARS_COUNT = 2;
+    public static final int CARS_COUNT = 6;
     private static ExecutorService executorService = Executors.newFixedThreadPool(CARS_COUNT);
     public static final AtomicInteger finishCount = new AtomicInteger(0);
 
