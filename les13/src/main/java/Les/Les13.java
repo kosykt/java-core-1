@@ -1,30 +1,30 @@
 package Les;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Les13 {
     public static void main(String[] args) {
-        Les13 sp = new Les13();
-        sp.run();
-    }
 
-    private void run() {
-        InterruptdThread interruptdThread = new InterruptdThread();
-        interruptdThread.start();
-        try {
-            Thread.sleep(50);
-            interruptdThread.interrupt();
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-}
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
 
-class InterruptdThread extends Thread{
-    @Override
-    public void run() {
-        int count = 0;
-        while (!isInterrupted()){
-            System.out.println(count++);
-        }
+        Runnable runnable = () -> {
+            System.out.println("Hello " + Thread.currentThread().getName());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        };
+
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+        fixedThreadPool.execute(runnable);
+
+        fixedThreadPool.shutdown();
     }
 }
