@@ -1,18 +1,44 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HW13 {
 
-    public static final int CARS_COUNT = 5;
+    public static final int CARS_COUNT = 1;
+    private static ExecutorService executorService = Executors.newFixedThreadPool(CARS_COUNT);
+    public static final AtomicInteger finishCount = new AtomicInteger(0);
 
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
 
-        Race race = new Race(new Road(60));
+        CyclicBarrier cb = new CyclicBarrier(CARS_COUNT + 1,
+                ()-> System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!"));
+        CountDownLatch cdl = new CountDownLatch(CARS_COUNT);
+
+        Race race = new Race(new Road(60), new Tunnel(30));
         Car[] cars = new Car[CARS_COUNT];
+        for (int i = 0; i < cars.length; i++) {
+            cars[i] = new Car(race, 20 + (int) (Math.random() * 10), cb, cdl, finishCount);
+        }
 
         for (int i = 0; i < cars.length; i++) {
-            cars[i] = new Car(race, 20 + (int) (Math.random() * 10));
+            executorService.execute(cars[i]);
+        }
+
+        try {
+            cb.await();
+        } catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            cdl.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
+            executorService.shutdown();
         }
     }
 }
@@ -20,8 +46,14 @@ public class HW13 {
 class Car implements Runnable {
 
     private static int CARS_COUNT;
+    static {
+        CARS_COUNT = 0;
+    }
     private Race race;
     private int speed;
+    private CyclicBarrier cb;
+    private CountDownLatch cdl;
+    private AtomicInteger finishCount;
     private String name;
 
     public String getName() {
@@ -30,21 +62,38 @@ class Car implements Runnable {
     public int getSpeed() {
         return speed;
     }
-    public Car(Race race, int speed) {
+    public Car(Race race, int speed, CyclicBarrier cb, CountDownLatch cdl, AtomicInteger finishCount) {
         this.race = race;
         this.speed = speed;
+        this.cb = cb;
+        this.cdl = cdl;
+        this.finishCount = finishCount;
         CARS_COUNT++;
         this.name = "Участник #" + CARS_COUNT;
     }
     @Override
     public void run() {
         try {
+            System.out.println(this.name + " готовится");
             Thread.sleep(500 + (int)(Math.random() * 800));
+            System.out.println(this.name + " готов");
+            cb.await();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         for (int i = 0; i < race.getStages().size(); i++) {
             race.getStages().get(i).go(this);
+        }
+
+        cdl.countDown();
+
+        int finishPlace = finishCount.incrementAndGet();
+
+        if (finishPlace == 1) {
+            System.out.println(this.name + " ПОБЕДИЛ В ГОНКЕ!!!");
+        } else {
+            System.out.printf("%s занял %d место%n", this.name, finishPlace);
         }
     }
 }
