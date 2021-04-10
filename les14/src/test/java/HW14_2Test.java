@@ -5,6 +5,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
+//большая часть кода честно украдено XD
 @RunWith(Parameterized.class)
 public class HW14_2Test {
 
