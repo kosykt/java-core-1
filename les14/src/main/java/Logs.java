@@ -8,5 +8,11 @@ public class Logs {
 
     public static void main(String[] args) {
         LOGGER.trace("Trace");
+        LOGGER.debug("Debug");
+        LOGGER.info("Info");
+        LOGGER.warn("Warn");
+        LOGGER.error("Error");
+        LOGGER.fatal("Fatal");
+        LOGGER.info("String: {}.", "Hello, World");
     }
 }
