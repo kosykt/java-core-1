@@ -1,9 +1,9 @@
-public class HW14 {
+public class HW14_1 {
 
     public static void main(String[] args) {
-        HW14 hw = new HW14();
+        HW14_1 hw = new HW14_1();
         int[] arr = {1, 2, 3, 4, 5};
-        hw.checkArr(arr);
+        System.out.println(hw.checkArr(arr));
     }
 
     public int[] checkArr(int[] arr) {
