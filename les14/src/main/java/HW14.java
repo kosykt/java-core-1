@@ -1,12 +1,12 @@
-import java.util.Arrays;
-
 public class HW14 {
+
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(checkArr(arr)));
+        HW14 hw = new HW14();
+        int[] arr = {1, 2, 3, 4, 5};
+        hw.checkArr(arr);
     }
 
-    private static int[] checkArr(int[] arr) {
+    public int[] checkArr(int[] arr) {
         int x = 0;
         int [] result = null;
         for (int i = 0; i < arr.length; i++) {
