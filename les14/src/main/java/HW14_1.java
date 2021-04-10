@@ -13,9 +13,9 @@ public class HW14_1 {
             if (arr[i] == 4) {
                 x = arr[i];
                 result = new int[arr.length - i - 1];
-                for (int j = i + 1, k = 0; j < arr.length; j++, k++) {
+                for (int j = i + 1, m = 0; j < arr.length; j++, m++) {
                     if (arr[j] == 4) continue;
-                    result[k] = arr[j];
+                    result[m] = arr[j];
                 }
             }
         }

@@ -5,6 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 public class HW14_1Test {
 
@@ -13,7 +18,7 @@ public class HW14_1Test {
     public static int[] arr1 = {5};
 
     @Before
-    public void init(){
+    public void init() {
         hw = new HW14_1();
     }
 
@@ -36,6 +41,5 @@ public class HW14_1Test {
 //    public void checkArr1(int[] a, int[] result){
 //        Assertions.assertArrayEquals(result, hw.checkArr(a));
 //    }
-
 
 }

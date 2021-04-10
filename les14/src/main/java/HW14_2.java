@@ -10,8 +10,7 @@ public class HW14_2 {
 
     public boolean check(int[] arr) {
         boolean x = false,
-                y = false,
-                z = false;
+                y = false;
 
         for (int i: arr) {
             if(i == 1){
@@ -20,9 +19,7 @@ public class HW14_2 {
                 y = true;
             }
         }
-        if (x == true && y == true){
-            z = true;
-        }
-        return z;
+
+        return (x && y);
     }
 }
