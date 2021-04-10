@@ -1,12 +1,11 @@
-import java.util.Arrays;
+package ru.geekbrains.testing;
 
-public class HW14 {
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(checkArr(arr)));
+public class Calculator {
+    public int add(int one, int two) {
+        return one + two;
     }
 
-    private static int[] checkArr(int[] arr) {
+    public static int[] checkArr(int[] arr) {
         int x = 0;
         int [] result = null;
         for (int i = 0; i < arr.length; i++) {
