@@ -2,6 +2,7 @@ public class HW14_1 {
 
     public static void main(String[] args) {
         HW14_1 hw = new HW14_1();
+
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(hw.checkArr(arr));
     }

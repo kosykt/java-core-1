@@ -19,7 +19,6 @@ public class HW14_2 {
                 y = true;
             }
         }
-
         return (x && y);
     }
 }
