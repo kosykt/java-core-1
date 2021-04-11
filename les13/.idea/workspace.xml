@@ -4,62 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="e58ccb4b-32f2-445b-b305-5991094fb79d" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="6af947fa-a489-4f4e-bd1b-b3d7dfdcbeee" name="Default Changelist" comment="" />
->>>>>>> Stashed changes
+    <list default="true" id="472fe7df-f0d6-43f2-bacd-54a3785a7cba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/les13.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Race.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Race.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../les14/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../les14/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../les14/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../les14/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< Updated upstream
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1qpBZJZrY3N2xNfd2gxD4ZMqhLn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
-=======
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1r1ZFm1UP6F2Rv6HU7SAZNkPOu1" />
->>>>>>> Stashed changes
+  <component name="ProjectId" id="1r1f1uyZDZrFmbk688XQIc9kcxr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-<<<<<<< Updated upstream
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.asd">
-    <configuration name="BarrierExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Les.BarrierExample" />
-      <module name="les13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Les.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="HW13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HW13" />
       <module name="les13" />
@@ -67,63 +36,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Les13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Les.Les13" />
-      <module name="les13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Les.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleCDL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Les.SimpleCDL" />
-      <module name="les13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Les.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="asd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Les.asd" />
-      <module name="les13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Les.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.asd" />
         <item itemvalue="Application.HW13" />
-        <item itemvalue="Application.Les13" />
-        <item itemvalue="Application.BarrierExample" />
-        <item itemvalue="Application.SimpleCDL" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e58ccb4b-32f2-445b-b305-5991094fb79d" name="Default Changelist" comment="" />
-      <created>1617766707367</created>
+      <changelist id="472fe7df-f0d6-43f2-bacd-54a3785a7cba" name="Default Changelist" comment="" />
+      <created>1618148309692</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617766707367</updated>
+      <updated>1618148309692</updated>
     </task>
     <servers />
   </component>
@@ -137,22 +63,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-=======
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6af947fa-a489-4f4e-bd1b-b3d7dfdcbeee" name="Default Changelist" comment="" />
-      <created>1618145460567</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1618145460567</updated>
-    </task>
-    <servers />
-  </component>
->>>>>>> Stashed changes
 </project>
