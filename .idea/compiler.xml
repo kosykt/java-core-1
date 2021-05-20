@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="InterfaceStream" />
+        <module name="les4" />
+        <module name="les5" />
+        <module name="les8" />
+        <module name="les9" />
+        <module name="les6" />
+        <module name="les7" />
+        <module name="JavaCore.les1" />
+        <module name="les10" />
+        <module name="les12" />
+        <module name="les11" />
+        <module name="Les2" />
+        <module name="les14" />
+        <module name="Les3" />
+        <module name="les13" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="InterfaceStream" target="8" />
+      <module name="JavaCore.les1" target="1.5" />
+      <module name="les10" target="8" />
+      <module name="les11" target="8" />
+      <module name="les12" target="8" />
+      <module name="les13" target="8" />
+      <module name="les14" target="8" />
+      <module name="Les2" target="1.5" />
+      <module name="Les3" target="8" />
+      <module name="les4" target="8" />
+      <module name="les5" target="8" />
+      <module name="les6" target="8" />
+      <module name="les7" target="8" />
+      <module name="les8" target="8" />
+      <module name="les9" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

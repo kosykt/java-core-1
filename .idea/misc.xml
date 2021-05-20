@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/les1/pom.xml" />
+        <option value="$PROJECT_DIR$/Les2/pom.xml" />
+        <option value="$PROJECT_DIR$/Les3/pom.xml" />
+        <option value="$PROJECT_DIR$/les4/pom.xml" />
+        <option value="$PROJECT_DIR$/les5/pom.xml" />
+        <option value="$PROJECT_DIR$/les6/pom.xml" />
+        <option value="$PROJECT_DIR$/les7/pom.xml" />
+        <option value="$PROJECT_DIR$/les8/pom.xml" />
+        <option value="$PROJECT_DIR$/les9/pom.xml" />
+        <option value="$PROJECT_DIR$/les10/pom.xml" />
+        <option value="$PROJECT_DIR$/les11/pom.xml" />
+        <option value="$PROJECT_DIR$/les12/pom.xml" />
+        <option value="$PROJECT_DIR$/les13/pom.xml" />
+        <option value="$PROJECT_DIR$/les14/pom.xml" />
+        <option value="$PROJECT_DIR$/InterfaceStream/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="adopt-openjdk-1.8" project-jdk-type="JavaSDK" />
+</project>

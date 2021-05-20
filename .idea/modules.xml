@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/InterfaceStream/InterfaceStream.iml" filepath="$PROJECT_DIR$/InterfaceStream/InterfaceStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les1/JavaCore.les1.iml" filepath="$PROJECT_DIR$/les1/JavaCore.les1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Les2/Les2.iml" filepath="$PROJECT_DIR$/Les2/Les2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Les3/Les3.iml" filepath="$PROJECT_DIR$/Les3/Les3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-core-1.iml" filepath="$PROJECT_DIR$/.idea/java-core-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les10/les10.iml" filepath="$PROJECT_DIR$/les10/les10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les11/les11.iml" filepath="$PROJECT_DIR$/les11/les11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les12/les12.iml" filepath="$PROJECT_DIR$/les12/les12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les13/les13.iml" filepath="$PROJECT_DIR$/les13/les13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les14/les14.iml" filepath="$PROJECT_DIR$/les14/les14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les4/les4.iml" filepath="$PROJECT_DIR$/les4/les4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les5/les5.iml" filepath="$PROJECT_DIR$/les5/les5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les6/les6.iml" filepath="$PROJECT_DIR$/les6/les6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les7/les7.iml" filepath="$PROJECT_DIR$/les7/les7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les8/les8.iml" filepath="$PROJECT_DIR$/les8/les8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/les9/les9.iml" filepath="$PROJECT_DIR$/les9/les9.iml" />
+    </modules>
+  </component>
+</project>
